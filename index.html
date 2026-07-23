@@ -1,12 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-amber-100 min-h-screen max-w-screen">
-    <div class="h-[20vh] w-screen bg-black">j</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Setup Guide</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function copyToClipboard(button) {
+        const codeElement = button.previousElementSibling;
+        const text = codeElement.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          const originalText = button.textContent;
+          button.textContent = "Copied!";
+          setTimeout(() => {
+            button.textContent = originalText;
+          }, 2000);
+        });
+      }
+    </script>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <main class="max-w-2xl mx-auto px-5 py-10">
+      <header class="text-center pb-8 border-b border-gray-200 mb-12">
+        <h1 class="text-4xl font-bold mb-2 tracking-tight">
+          Developer Setup Guide
+        </h1>
+        <p class="text-lg text-gray-600 font-light">
+          Get started with Git, GitHub CLI, and Node.js on Windows
+        </p>
+      </header>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-800">
+          What is Winget?
+        </h2>
+        <p class="text-gray-600 mb-3">
+          Winget is the Windows package manager. It allows you to install
+          applications directly from the command line, making the installation
+          process faster and easier.
+        </p>
+        <p class="text-gray-500 italic text-sm">
+          Note: You can also install these tools via .msi or .exe files from the
+          web, but using the terminal is recommended for simplicity.
+        </p>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800">
+          Installation Commands
+        </h2>
+
+        <div
+          class="bg-white border border-gray-200 rounded-lg p-5 mb-5 hover:shadow-md transition-shadow"
+        >
+          <h3 class="text-lg font-semibold mb-2 text-gray-800">
+            1. Install Git
+          </h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Git is a version control system needed for managing your code.
+          </p>
+          <div
+            class="bg-gray-100 border-l-4 border-gray-900 p-3 rounded overflow-x-auto mb-3 flex items-center justify-between"
+          >
+            <code class="font-mono text-sm text-gray-900"
+              >winget install -e --id Git.Git</code
+            >
+            <button
+              onclick="copyToClipboard(this)"
+              class="ml-2 px-3 py-1 bg-gray-800 text-white text-xs rounded hover:bg-gray-700 transition-colors whitespace-nowrap"
+            >
+              Copy
+            </button>
+          </div>
+          <a
+            href="https://git-scm.com/download/win"
+            target="_blank"
+            class="inline-block bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+          >
+            Download Git (GUI)
+          </a>
+        </div>
+
+        <div
+          class="bg-white border border-gray-200 rounded-lg p-5 mb-5 hover:shadow-md transition-shadow"
+        >
+          <h3 class="text-lg font-semibold mb-2 text-gray-800">
+            2. Install GitHub CLI
+          </h3>
+          <p class="text-gray-600 text-sm mb-4">
+            GitHub CLI allows you to interact with GitHub directly from your
+            terminal.
+          </p>
+          <div
+            class="bg-gray-100 border-l-4 border-gray-900 p-3 rounded overflow-x-auto mb-3 flex items-center justify-between"
+          >
+            <code class="font-mono text-sm text-gray-900"
+              >winget install -e --id GitHub.cli</code
+            >
+            <button
+              onclick="copyToClipboard(this)"
+              class="ml-2 px-3 py-1 bg-gray-800 text-white text-xs rounded hover:bg-gray-700 transition-colors whitespace-nowrap"
+            >
+              Copy
+            </button>
+          </div>
+          <a
+            href="https://github.com/cli/cli/releases"
+            target="_blank"
+            class="inline-block bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+          >
+            Download GitHub CLI (GUI)
+          </a>
+        </div>
+
+        <div
+          class="bg-white border border-gray-200 rounded-lg p-5 mb-5 hover:shadow-md transition-shadow"
+        >
+          <h3 class="text-lg font-semibold mb-2 text-gray-800">
+            3. Install Node.js & npm
+          </h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Node.js is a JavaScript runtime, and npm is its package manager.
+          </p>
+          <div
+            class="bg-gray-100 border-l-4 border-gray-900 p-3 rounded overflow-x-auto mb-3 flex items-center justify-between"
+          >
+            <code class="font-mono text-sm text-gray-900"
+              >winget install -e --id OpenJS.NodeJS</code
+            >
+            <button
+              onclick="copyToClipboard(this)"
+              class="ml-2 px-3 py-1 bg-gray-800 text-white text-xs rounded hover:bg-gray-700 transition-colors whitespace-nowrap"
+            >
+              Copy
+            </button>
+          </div>
+          <a
+            href="https://nodejs.org/en/download/package-manager/current/windows"
+            target="_blank"
+            class="inline-block bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
+          >
+            Download Node.js (GUI)
+          </a>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-800">
+          Create a GitHub Account
+        </h2>
+        <p class="text-gray-600 mb-4">
+          If you don't have a GitHub account yet, sign up here:
+        </p>
+        <a
+          href="https://github.com/signup"
+          target="_blank"
+          class="inline-block bg-gray-900 text-white px-6 py-3 rounded font-medium hover:bg-gray-700 transition-colors"
+        >
+          Create GitHub Account
+        </a>
+      </section>
+
+      <section class="bg-gray-100 border border-gray-300 rounded-lg p-6">
+        <h2 class="text-2xl font-semibold mb-3 text-gray-800">Need Help?</h2>
+        <p class="text-gray-700">
+          If you encounter any technical issues during the setup process, don't
+          hesitate to reach out. I'll do my best to help you resolve them.
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
