@@ -8,8 +8,11 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-700: oklch(48.8% 0.243 264.376);
+    --color-indigo-50: oklch(96.2% 0.018 272.314);
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -19,6 +22,7 @@
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-2xl: 42rem;
@@ -220,17 +224,32 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
   .inline-block {
     display: inline-block;
   }
+  .min-h-fit {
+    min-height: fit-content;
+  }
   .max-w-2xl {
     max-width: var(--container-2xl);
+  }
+  .place-items-center {
+    place-items: center;
   }
   .items-center {
     align-items: center;
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .overflow-x-auto {
     overflow-x: auto;
@@ -362,8 +381,14 @@
     --tw-tracking: var(--tracking-tight);
     letter-spacing: var(--tracking-tight);
   }
+  .wrap-normal {
+    overflow-wrap: normal;
+  }
   .whitespace-nowrap {
     white-space: nowrap;
+  }
+  .text-black {
+    color: var(--color-black);
   }
   .text-gray-500 {
     color: var(--color-gray-500);
@@ -408,6 +433,13 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
+}
+.selected {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+.unselected {
+  color: hsl(0, 0%, 30%);
 }
 @property --tw-border-style {
   syntax: "*";

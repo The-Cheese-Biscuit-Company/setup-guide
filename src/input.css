@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.selected {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+.unselected {
+  color: hsl(0, 0%, 30%);
+}

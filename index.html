@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dev Setup Guide</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon" />
+  <link rel="shortcut icon" href="src/imgs/logo.jpeg" type="image/x-icon" />
+  <script src="src/copy.js"></script>
   <script src="src/main.js"></script>
 </head>
 
@@ -20,10 +21,34 @@
         Get started with Git, GitHub CLI, and Node.js on Windows
       </p>
     </header>
+    <nav class="flex gap-3">
+    <button onclick="showSection('installation')" class="selected" id="btn-installation">Installation</button>
+    <button onclick="showSection('project-structure')" class="unselected" id="btn-project-structure">Project Structure</button>
+    <button onclick="showSection('tutorial')" class="unselected" id="btn-tutorial">Tools Usage Tutorial</button>
+    </nav>
+    <br>
 
+    <section id="dynamicDisplay-project-structure" class="hidden">
+      <div class="min-h-fit grid place-items-center">
+        <img src="src/imgs/construction.png">
+        <p class="font-bold text-black wrap-normal">
+          This part is currently under construction
+        </p>
+      </div>
+      <br>
+    </section>
+
+    <section id="dynamicDisplay-tutorial" class="hidden">
+      <div class="min-h-fit grid place-items-center">
+        <img src="src/imgs/construction.png">
+        <p class="font-bold text-black wrap-normal">
+          This part is currently under construction
+        </p>
+      </div>
+      <br>
+    </section>
       <!-- tldr wingit defination +installation -->
-    <section class="mb-12">
-      
+    <section id="dynamicDisplay-installation" class="mb-12">
       <h2 class="text-2xl font-semibold mb-6 text-gray-800">
         Installation Commands
       </h2>
