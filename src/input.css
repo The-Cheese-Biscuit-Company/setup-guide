@@ -7,9 +7,10 @@
 .unselected {
   color: hsl(0, 0%, 30%);
 }
-.text-light-grey{
+.text-light-grey {
   color: hsl(0, 0%, 45%);
 }
-.spacer{
+.spacer {
   height: 20vh;
+  width: 100%;
 }
