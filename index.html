@@ -52,6 +52,19 @@
         <p>New wall of text comming soon...</p>
         <p class="text-light-grey text-right">~Till then keep on larping</p>
       </div>
+      <div class="spacer"></div>
+      <div class="P2PHolder">
+        <h2 class="text-4xl font-bold">P2P connection in a nutshell</h2><br>
+        <div class="h-fit w-full bg-gray-800">
+          <img src="src/imgs/P2PFlow.png">
+        </div><br>
+        <p>The App sits inside the Render UI where it catches the user requests to connect to other peers.
+          which then goes to Electron Main Processes which has node.js module in it, which initiates a Local area Network 
+           search then if a peer is found peer.js(WebRTC wrapper) connects to the other peer via WebRTC handshake establishing a peer to peer connection 
+
+        </p>
+        <!-- <p class="text-light-grey text-right">~Till then keep on larping</p> -->
+      </div>
       <div class="min-h-fit grid place-items-center">
         <img src="src/imgs/construction.png">
         <p class="font-bold text-black wrap-normal">
